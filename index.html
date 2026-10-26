@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101713">
+<meta name="description" content="BioSage helps you explore scientific literature, understand research papers, and interpret findings with source links.">
+<title>BioSage — Understand the evidence</title>
+<style>
+:root{color-scheme:dark;--bg:#101713;--panel:#18221c;--panel2:#202c24;--line:#34443a;--text:#edf3ec;--muted:#a7b6a9;--accent:#b8ed79;--accent-ink:#15200e;--warn:#f0c778;--radius:18px}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#243528 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+a{color:var(--accent);text-underline-offset:3px}button,input,textarea{font:inherit}button{cursor:pointer}.shell{max-width:1080px;margin:auto;padding:28px 22px 70px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:26px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;font-weight:750;letter-spacing:-.04em;font-size:1.3rem}.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:900;font-size:1.25rem}.tag{font-size:.78rem;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:8px}.hero{padding:56px 0 32px;max-width:760px}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:750;color:var(--accent)}h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.02;letter-spacing:-.065em;margin:14px 0 18px;max-width:760px}h1 span{color:var(--accent)}.hero p{color:var(--muted);font-size:1.1rem;max-width:630px;margin:0}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:18px;align-items:start}.panel{background:rgba(24,34,28,.94);border:1px solid var(--line);border-radius:var(--radius);padding:22px}.panel h2{font-size:1rem;margin:0 0 7px;letter-spacing:-.02em}.sub{color:var(--muted);font-size:.9rem;margin:0 0 18px}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}.tab{background:transparent;color:var(--muted);border:1px solid var(--line);padding:9px 13px;border-radius:9px}.tab[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}.fieldlabel{display:block;font-size:.86rem;font-weight:650;margin:15px 0 7px}textarea,input[type=url],input[type=text]{width:100%;border:1px solid #46584a;background:#111a14;color:var(--text);padding:13px 14px;border-radius:11px;outline:none}textarea{min-height:124px;resize:vertical}textarea:focus,input:focus{border-color:var(--accent);box-shadow:0 0 0 3px #b8ed7920}.options{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:14px 0 18px}.options label{color:var(--muted);font-size:.88rem;display:flex;align-items:center;gap:7px}select{background:#111a14;color:var(--text);border:1px solid #46584a;border-radius:9px;padding:9px}.primary{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:12px 17px;font-weight:800}.primary:disabled{opacity:.55;cursor:wait}.hint{font-size:.78rem;color:var(--muted);margin-top:10px}.examples{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.example{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:8px 10px;border-radius:9px;font-size:.82rem;text-align:left}.side{display:grid;gap:14px}.side .panel{padding:18px}.step{display:flex;gap:10px;margin-top:15px}.num{flex:0 0 26px;height:26px;display:grid;place-items:center;background:#2b3b2d;border-radius:8px;color:var(--accent);font-size:.8rem;font-weight:800}.step strong{display:block;font-size:.88rem}.step p{font-size:.8rem;color:var(--muted);margin:3px 0 0}.result{margin-top:20px;display:none}.result.show{display:block}.resulthead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.resulthead h2{font-size:1.35rem;margin:0}.status{font-size:.8rem;color:var(--accent)}.answer{white-space:pre-wrap;color:#e0e9df;font-size:.96rem}.papers{display:grid;gap:10px;margin-top:18px}.paper{padding:14px;background:#111a14;border:1px solid var(--line);border-radius:12px}.paper h3{font-size:.94rem;line-height:1.35;margin:0 0 7px}.paper p{font-size:.8rem;color:var(--muted);margin:0 0 8px}.paper a{font-size:.84rem}.error{color:#ffd3ca;background:#3b211e;border:1px solid #75453d;padding:12px;border-radius:10px;margin-top:14px}.footer{color:var(--muted);font-size:.8rem;margin-top:32px;border-top:1px solid var(--line);padding-top:18px}.hidden{display:none!important}.busy{display:inline-block;width:13px;height:13px;border:2px solid #34442c;border-top-color:#15200e;border-radius:50%;animation:spin .8s linear infinite;vertical-align:-2px;margin-right:8px}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:760px){.workspace{grid-template-columns:1fr}.hero{padding-top:38px}.side{grid-template-columns:1fr 1fr}.topbar{align-items:flex-start}}@media(max-width:480px){.shell{padding:18px 14px 45px}.panel{padding:16px}.side{grid-template-columns:1fr}.tag{display:none}h1{font-size:2.8rem}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topbar"><div class="brand"><div class="mark" aria-hidden="true">B</div>BioSage</div><div class="tag">SCIENTIFIC LITERATURE, MADE CLEAR</div></header>
+<main>
+<section class="hero"><div class="eyebrow">Read beyond the abstract</div><h1>Understand the science.<br><span>Keep the evidence.</span></h1><p>Ask a question or bring a paper. BioSage helps you explore published research, understand findings, and trace answers back to their sources.</p></section>
+<div class="workspace">
+<section class="panel">
+<div class="tabs" role="tablist" aria-label="Research mode"><button class="tab" id="askTab" role="tab" aria-selected="true" aria-controls="askPane">Ask science</button><button class="tab" id="paperTab" role="tab" aria-selected="false" aria-controls="paperPane">Read a paper</button></div>
+<div id="askPane" role="tabpanel" aria-labelledby="askTab">
+<h2>What do you want to investigate?</h2><p class="sub">Ask in everyday language. We'll look for relevant scientific literature.</p>
+<label class="fieldlabel" for="question">Your research question</label><textarea id="question" placeholder="e.g. Can cancer cells or cancer-targeting mechanisms be used to treat other tumours?"></textarea>
+<div class="options"><label for="level">Explanation level</label><select id="level"><option value="beginner">Simple explanation</option><option value="student" selected>University level</option><option value="advanced">Technical detail</option></select></div>
+<button class="primary" id="investigate">Investigate evidence →</button><div class="hint">Answers should distinguish research findings from interpretation and uncertainty.</div>
+<div class="examples"><button class="example" data-q="What does current research say about CRISPR gene editing safety?">CRISPR safety</button><button class="example" data-q="How do microplastics affect human health, and what evidence comes from human studies?">Microplastics & health</button><button class="example" data-q="Can cancer cells be used to treat cancer? What approaches have actually been studied?">Can cancer fight cancer?</button></div>
+</div>
+<div id="paperPane" role="tabpanel" aria-labelledby="paperTab" class="hidden">
+<h2>Bring your own paper</h2><p class="sub">Paste a DOI or a public paper URL. If the full text isn't accessible, BioSage will tell you what it can and cannot read.</p>
+<label class="fieldlabel" for="paperUrl">Paper link or DOI</label><input id="paperUrl" type="url" placeholder="https://doi.org/... or a PubMed / Europe PMC link">
+<label class="fieldlabel" for="paperQuestion">What do you want to know?</label><textarea id="paperQuestion" placeholder="Summarize the main findings, explain Table 2, or identify the study's limitations."></textarea>
+<div class="options"><label for="paperLevel">Explanation level</label><select id="paperLevel"><option value="beginner">Simple explanation</option><option value="student" selected>University level</option><option value="advanced">Technical detail</option></select></div>
+<button class="primary" id="readPaper">Read this paper →</button>
+</div>
+<div id="error" class="error hidden" role="alert"></div>
+<section id="result" class="result" aria-live="polite">
+<div class="resulthead"><h2>Research brief</h2><span id="status" class="status">Evidence retrieved</span></div>
+<div id="answer" class="answer"></div><div id="papers" class="papers"></div>
+</section>
+</section>
+<aside class="side">
+<section class="panel"><h2>How it works</h2><div class="step"><div class="num">01</div><div><strong>Find relevant research</strong><p>Search scientific literature and identify relevant sources.</p></div></div><div class="step"><div class="num">02</div><div><strong>Explain the findings</strong><p>Translate research language without hiding uncertainty.</p></div></div><div class="step"><div class="num">03</div><div><strong>Follow the evidence</strong><p>Open original papers and check the source yourself.</p></div></div></section>
+<section class="panel"><h2>Evidence, not certainty</h2><p class="sub" style="margin:8px 0 0">A paper can support a claim without proving it. Study design, sample size, limitations, and replication all matter.</p></section>
+</aside>
+</div>
+</main>
+<footer class="footer">BioSage is a research and learning aid, not medical advice. Always check original sources. Literature coverage depends on source availability and access permissions.</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+let mode="ask";
+function setMode(next){mode=next;const ask=next==="ask";$("askTab").setAttribute("aria-selected",String(ask));$("paperTab").setAttribute("aria-selected",String(!ask));$("askPane").classList.toggle("hidden",!ask);$("paperPane").classList.toggle("hidden",ask);$("error").classList.add("hidden")}
+$("askTab").addEventListener("click",()=>setMode("ask"));$("paperTab").addEventListener("click",()=>setMode("paper"));
+document.querySelectorAll("[data-q]").forEach(b=>b.addEventListener("click",()=>{$("question").value=b.dataset.q;$("question").focus()}));
+function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function render(data){$("result").classList.add("show");$("answer").textContent=data.answer||"No answer was returned.";const list=Array.isArray(data.papers)?data.papers:[];$("papers").innerHTML=list.map(p=>'<article class="paper"><h3>'+escapeHtml(p.title||"Untitled paper")+'</h3><p>'+escapeHtml([p.authors,p.year,p.journal].filter(Boolean).join(" · "))+'</p>'+(p.abstract?'<p>'+escapeHtml(p.abstract)+'</p>':"")+'<a href="'+escapeHtml(p.url||"#")+'" target="_blank" rel="noopener noreferrer">Open original paper ↗</a></article>').join("");$("status").textContent=data.model_used?"AI-assisted · sources retrieved":"Sources retrieved"}
+async function submit(path,payload,button){$("error").classList.add("hidden");$("result").classList.remove("show");button.disabled=true;const old=button.innerHTML;button.innerHTML='<span class="busy"></span>Working with the evidence…';try{const r=await fetch(path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});const data=await r.json().catch(()=>({detail:"The server returned an unreadable response."}));if(!r.ok)throw new Error(data.detail||data.error||"Request failed. Check that the backend is running.");render(data)}catch(e){$("error").textContent=e.message+" If you're viewing the static page, start the BioSage backend and try again.";$("error").classList.remove("hidden")}finally{button.disabled=false;button.innerHTML=old}}
+$("investigate").addEventListener("click",()=>{const question=$("question").value.trim();if(!question){$("question").focus();return}submit("/api/investigate",{question,level:$("level").value},$("investigate"))});
+$("readPaper").addEventListener("click",()=>{const url=$("paperUrl").value.trim(),question=$("paperQuestion").value.trim();if(!url){$("paperUrl").focus();return}submit("/api/paper",{url,question:question||"Summarize this paper's research question, methods, main findings, and limitations.",level:$("paperLevel").value},$("readPaper"))});
+</script>
+</body></html>
